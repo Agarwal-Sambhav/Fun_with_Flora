@@ -1,0 +1,1 @@
+9999999999{"name": "sphinxcontrib-jsmath", "version": "1.0.1", "summary": "A sphinx extension which renders display math in HTML via JavaScript", "platform": "any", "requires_dist": ["mypy ; extra == 'test'", "flake8 ; extra == 'test'", "pytest ; extra == 'test'"], "requires_python": ">=3.5", "files": [], "_cache_version": "1.0.0"}

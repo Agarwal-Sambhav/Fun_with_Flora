@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--Webpage Styling-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - Fun With Flora</title>
+
+    <style>
+        @font-face {
+          font-family: "LowballNeue";
+          src: url("static/FredokaOne-Regular.ttf") format("truetype");
+         }
+
+        body.webpage {
+          font-family: "LowballNeue";
+        }
+        
+        div.topBar {
+            position: relative;
+            margin-left: -1%;
+            margin-right: -1%;
+            margin-top: -5%;
+            margin-bottom: 5%;
+            /*font-family: LowballNeue;*/
+            top: 0px;
+            height: 625px;
+            /*border: 3px solid goldenrod;*/
+            background-color: #f2f2f2;
+            background-image: url('static/wetleaves.jpg');            
+            background-size: 2000px;
+        }
+
+        div.topBarText {
+            position: relative;
+            padding-top: 200px;
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .largeFont {
+            font-size: 100px;
+        }
+
+        div.mainContent {
+            position: relative;
+            /*font-family: LowballNeue;*/
+            margin:auto;
+            width: 1000px;
+            border: 3px solid transparent;
+            line-height: 225%;
+        }
+
+        .snapButton {
+            background-color: #d2d2d2;
+            border: transparent;
+            text-align: center;
+            font-family: LowballNeue;
+            font-size: 40px; 
+            
+        }
+
+        div.imageBox {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border: 3px solid #f2f2f2;
+            margin: auto;
+        }
+
+    </style>
+
+</head>
+
+  <!--Webpage Formatting-->
+<body class="webpage">
+    <div class="topBar">
+        <div class ="topBarText">
+        <h1 class="largeFont">Fun with Flora</h1>
+
+        </div>
+    </div>
+
+    <div class="mainContent" id="1" style="margin-top: -4%;">
+        <div>
+            <h3 style="text-align: center;">Abdurrahman, Samarth, Sambhav, Yash<h3>
+
+            <br> 
+              
+
+            <h1 style="text-align: center;">About our Project:</h1>
+              
+
+            <p style="text-align: center; font-size: 30px; width: 600px; margin: auto;">
+
+                Do you ever have a stroll one nice evening and you think to yourself,
+                “Hey, that plant looks beautiful. But, what plant is it?” This
+                is where Fun with Flora! ® comes into play. Point your camera at any plant,
+                and get information within seconds, including its common name, scientific name,
+                informational links, plant diseases and more! 
+                <br><br>
+                Ready,<br><br>Set,<br><br>
+
+            </p>
+        </div>
+        <div>
+            <form action= "{{ url_for('camera') }}" style="text-align: center;">
+                <button class="snapButton"> Snap!</button>
+            </form>
+        </div> <br>
+    </div>
+</body>

@@ -1,0 +1,1 @@
+9999999999{"name": "funcsigs", "version": "1.0.2", "summary": "Python function signatures from PEP362 for Python 2.6, 2.7 and 3.2+", "platform": "UNKNOWN", "requires_dist": ["ordereddict; python_version<\"2.7\""], "requires_python": null, "files": [], "_cache_version": "1.0.0"}

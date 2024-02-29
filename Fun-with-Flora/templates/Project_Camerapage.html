@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+
+     <!--CSS Styling-->
+     <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Scan - Fun With Flora</title>
+      <style>
+         @font-face {
+         font-family: "LowballNeue";
+         src: url("static/FredokaOne-Regular.ttf") format("truetype");
+         }
+         body.webpage {
+         background-image: url('static/robert-katzki-trees.jpg');
+         color: white;
+         font-family: LowballNeue;
+         }
+         div.topBar {
+         position: relative;
+         text-align: center;
+         /*font-family: LowballNeue;*/
+         top: 5px;
+         height: 175px;
+         /*border: 3px solid goldenrod;*/
+         background-color: transparent;
+         /*background-image: url('wetleaves.jpg');*/
+         background-size: 2000px;
+         }
+         div.mainContent {
+         position: relative;
+         margin:auto;
+         width: 1000px;
+         border: 3px solid transparent;
+         line-height: 225%;
+         }
+         div.leftHeaders {
+          position: relative;
+          width: 600px;
+          margin:auto;
+         
+         /*border: 3px solid goldenrod;*/
+         }
+         div.leftDescText {
+           font-size: 20px;
+         /*border: 3px solid goldenrod;*/
+         }
+
+        .captureButton {
+          background-color: #d2d2d2;
+          border: transparent;
+          text-align: center;
+          font-family: LowballNeue;
+          font-size: 30px;
+          
+        }
+        
+      </style>
+   </head>
+   
+  <!--Formatting the top of the webpage-->
+  <body class="webpage">
+      <div class="topBar">
+         
+         <br>
+         <h1 style="color:white;">Fun With Flora!</h1>
+         <p style="color:white;">Abdurrahman, Samarth, Sambhav, Yash</p>
+      </div>
+      <div class="mainContent">
+      <div class="leftHeaders">
+         <h2 style="text-align: center;">What to Do:</h2>
+         <div class="leftDescText">
+            <p>
+               Hold the plant you want to scan in front of the camera, we'll
+              provide you information on the scientific name of the plant,
+              a picture, as well as some links for you to learn more about it.
+            </p>
+         </div>
+      </div>
+
+<body>
+<center> 
+<body>
+
+<!--Implimenting the JS Webcam-->
+<div id="container">
+<video width="500" height="500" autoplay="true" id="video">
+</video>
+</div>
+<button class="captureButton" onclick="capture()">Capture</button>  <br> </br>
+<canvas id="canvas" style="overflow:auto"></canvas>
+<br></br>
+  
+<!-- <p> Image Converted to String: </p> -->
+<p id="printresult"></p>
+</center>
+<script>
+var video = document.querySelector("#video");
+ if (navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function (stream) {
+          video.srcObject = stream;
+        })
+        .catch(function (err0r) {
+          console.log("Something went wrong!");
+        });
+ }
+  
+ var resultb64="";
+ function capture() {        
+    var canvas = document.getElementById('canvas');     
+    var video = document.getElementById('video');
+    canvas.width = 200;
+    canvas.height = 200;
+    canvas.getContext('2d').drawImage(video, 0, 0, 200,200);  
+    resultb64 = canvas.toDataURL();
+    console.log("base64");
+    console.log(resultb64);
+    document.getElementById("input").value = resultb64;
+    document.getElementById("form").submit();
+ }
+  
+
+</script> 
+
+<!-- Hides the search button and bar, they still exist though -->
+<form style = "display: none;" id = "form" action="{{ url_for('camera') }}" method="post">
+  <input style = "display:none;" id = "input" type="text" name="projectFilepath">
+  <input style = "display: none;" type="submit">
+</form>
+</body>
+
+
+        
+</body>
+
+  

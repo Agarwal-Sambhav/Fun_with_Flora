@@ -1,0 +1,1 @@
+9999999999{"name": "snowballstemmer", "version": "2.2.0", "summary": "This package provides 29 stemmers for 28 languages generated from Snowball algorithms.", "platform": "", "requires_dist": null, "requires_python": null, "files": [], "_cache_version": "1.0.0"}

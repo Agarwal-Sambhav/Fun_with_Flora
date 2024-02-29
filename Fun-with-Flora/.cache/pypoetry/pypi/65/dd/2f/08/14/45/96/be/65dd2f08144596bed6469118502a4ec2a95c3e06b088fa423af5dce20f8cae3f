@@ -1,0 +1,1 @@
+9999999999{"name": "asttokens", "version": "2.0.8", "summary": "Annotate AST trees with source code positions", "platform": null, "requires_dist": ["six", "typing ; python_version < \"3.5\"", "astroid (<=2.5.3) ; extra == 'test'", "pytest ; extra == 'test'"], "requires_python": "", "files": [], "_cache_version": "1.0.0"}

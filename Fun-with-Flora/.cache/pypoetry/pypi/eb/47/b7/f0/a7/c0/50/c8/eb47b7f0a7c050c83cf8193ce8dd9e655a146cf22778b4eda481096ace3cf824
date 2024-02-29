@@ -1,0 +1,1 @@
+9999999999{"name": "entrypoints", "version": "0.4", "summary": "Discover and load entry points from installed packages.", "platform": "", "requires_dist": null, "requires_python": ">=3.6", "files": [], "_cache_version": "1.0.0"}

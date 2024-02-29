@@ -1,0 +1,1 @@
+9999999999{"name": "Pygments", "version": "2.13.0", "summary": "Pygments is a syntax highlighting package written in Python.", "platform": "any", "requires_dist": ["importlib-metadata ; (python_version < \"3.8\") and extra == 'plugins'"], "requires_python": ">=3.6", "files": [], "_cache_version": "1.0.0"}

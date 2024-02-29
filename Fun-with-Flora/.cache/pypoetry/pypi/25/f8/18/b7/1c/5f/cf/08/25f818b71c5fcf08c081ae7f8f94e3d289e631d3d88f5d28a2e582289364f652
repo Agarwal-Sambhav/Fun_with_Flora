@@ -1,0 +1,1 @@
+9999999999{"name": "sphinxcontrib-qthelp", "version": "1.0.3", "summary": "sphinxcontrib-qthelp is a sphinx extension which outputs QtHelp document.", "platform": "any", "requires_dist": ["pytest ; extra == 'test'", "docutils-stubs ; extra == 'lint'", "mypy ; extra == 'lint'", "flake8 ; extra == 'lint'"], "requires_python": ">=3.5", "files": [], "_cache_version": "1.0.0"}

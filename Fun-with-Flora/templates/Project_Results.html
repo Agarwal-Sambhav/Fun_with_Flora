@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--Webpage Styling-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - Fun With Flora</title>
+
+    <style>
+        @font-face {
+            font-family: LowballNeue;
+            src: url("static/FredokaOne-Regular.ttf") format("truetype");
+        }
+      body.webpage {
+         font-family: LowballNeue;
+         }
+
+        div.topBar {
+            position: sticky;
+            position: -webkit-sticky;
+            z-index: 999;
+            margin-left: -1%;
+            margin-right: -1%;
+            margin-top: -5%;
+            margin-bottom: 5%;
+            text-align: center;
+            /*font-family: LowballNeue;*/
+            top: 0px;
+            height: 100px;
+            /*border: 3px solid goldenrod;*/
+            background-color: #f2f2f2;
+            background-image: url('static/wetleaves.jpg');
+            background-size: 2000px;
+        }
+
+        div.mainContent {
+            position: relative;
+            /*font-family: LowballNeue;*/
+            margin:auto;
+            width: 1000px;
+            border: 3px solid transparent;
+            line-height: 225%;
+        }
+
+        /*div.leftHeaders {
+            position: relative;
+            left: 50px;
+            top: 10px;
+            width: 700px;
+            float: left;
+            border: 3px solid goldenrod;
+        }*/
+
+        /*div.leftDescText {
+            position: relative;
+            width: 600px;
+            font-size: 20px;
+            float: right;
+            border: 3px solid goldenrod;
+        }*/
+
+        div.imageBox {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border: 3px solid #f2f2f2;
+            margin: auto;
+        }
+
+        .topBoxButton {
+            background-color: #d2d2d2;
+            border: transparent;
+            text-align: center;
+            font-family: LowballNeue;
+            font-size: large;
+            float: right; 
+            margin-top: 40px; 
+            margin-right: 5%;
+        }
+
+    </style>
+
+</head>
+
+<!--Formatting webpage-->
+<body class="webpage">
+    <div class="topBar" style="text-align:unset; margin-top: -1%;">
+        <div  id="0">
+            <div style="float:left;  margin-left: 2%">
+                <h2 style="margin-bottom:-1%;color:white;">Fun with Flora!</h2>
+                <p style="color:white;">Abdurrahman, Samarth, Sambhav, Yash</p></div>
+        </div>
+
+        <form action="{{ url_for('camera') }}">
+            <button class="topBoxButton">Scan a Plant</button>
+        </form>
+        <form action="{{ url_for('index') }}">
+            <button class="topBoxButton">Homepage</button>
+        </form>
+    </div>
+
+    <div class="mainContent" id="1" style="margin-top: -4%;">
+        <div>
+
+            
+        </div>
+    </div>
+
+    <div class="mainContent" id="2" style="background-image: url('static/robert-katzki-trees.jpg'); color: white;">
+        <!--<div class="imageBox">
+            <p style="text-align: center;"><i>Image from camera appears here</i></p>-->
+            <h2 style="text-align: center;">Result:</h2>
+
+            <h1 style="text-align: center;">
+
+                <i>{{scientific_name}}</i> 
+
+            </h1>
+        </div>
+    </div>
+  
+<!--Results information being formatted-->
+    <div class="mainContent" id="3" style="text-align: center;">
+      <h2>Plant Information:</h2>
+      <p>Common Name: {{common_names}}</p>
+      <p>Want to learn more? <a>Check out: {{wiki_link}}</a></p>
+      <p>Plant Identification Accuracy: {{probability}}</p>
+      <p>Is the Plant Healthy? {{is_healthy}}</p>
+      <p>Potential Diseases: {{diseases}}</p>
+      <p>Prevention Methods: {{prevention}}</p>
+      <p>Health Assessment Accuracy: {{is_healthy_probability}} </p>
+      
+    </div>
+    
+    <br><br>
+</body>
+</html>

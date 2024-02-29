@@ -1,0 +1,1 @@
+9999999999{"name": "pyzmq", "version": "23.2.1", "summary": "Python bindings for 0MQ", "platform": null, "requires_dist": ["py ; implementation_name == \"pypy\"", "cffi ; implementation_name == \"pypy\""], "requires_python": ">=3.6", "files": [], "_cache_version": "1.0.0"}
