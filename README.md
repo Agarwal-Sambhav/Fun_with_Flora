@@ -4,13 +4,6 @@ Developed a Web Application leveraging camera technology to recognize plants, pr
 Created two projects using Django and Flask frameworks, orchestrating end-to-end development processes. 
 Crafted intuitive frontends utilizing HTML / CSS / Javascript and parsed data through JSON.
 
-Fun With Flora!
-
-Advanced Python Project Documentation - Advanced Java Topics
-
-Abdurrahman Raza, Sambhav Agarwal, Samarth Hiremath, Yash Natu
-Period 8
-
 - What is Fun With Flora?
 
 Going on a stroll and come across this beautiful flower you have never seen before and want to know more about? No problem! Just point your camera at the plant, and Fun With Flora will provide relevant information about the plant within seconds, including the name, scientific name, health status, potential diseases and much more about the plant. It is an interactive, easily accessible tool that anyone can use. These past few decades have shifted our focus away from nature, and the general public is typically unaware of the vast, exclusive flora they live and breathe. Fun With Flora aims to bring this awareness back, helping the general public slowly be more aware of their surroundings and encourage a form of positive action to save it, as not just flora, but fauna also define a part of this beautiful planet’s future. 
